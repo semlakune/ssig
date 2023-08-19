@@ -82,7 +82,7 @@ export default function Home() {
                 }
               }}
           >
-            {isDownloading ? "Generating..." : "Generate and Download Image"}
+            {isDownloading ? "Generating..." : "Generate Image"}
           </button>
           {isDownloading ? <p>Generating image...</p> : null}
           {downloadLink && !isDownloading ? (
