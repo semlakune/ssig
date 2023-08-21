@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
       <div className="w-screen h-screen flex justify-start items-center flex-col gap-5 sm:mt-0 lg:mt-20">
-        <Image src={"/doraemon.gif"} alt={"doraemon"} width={192} height={192} priority={true}/>
+        <Image src={"/doraemon.gif"} alt={"doraemon"} width={80} height={80} priority={true}/>
         <h1 className="text-xl font-bold">Size Specific Image Generator</h1>
         <p className="lg:w-1/4 text-center mb-[50px] px-8">
           The Size Specific Image Generator is a tool designed for generates images that meet specific size requirements, ensuring accurate testing without the hassle of manual adjustments.
