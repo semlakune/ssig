@@ -57,7 +57,7 @@ export default function Home() {
   }, [value]);
 
   return (
-      <div className="w-screen h-screen flex justify-start items-center flex-col gap-5 mt-20">
+      <div className="w-screen h-screen flex justify-start items-center flex-col gap-5 sm:mt-0 lg:mt-20">
         <Image src={"/doraemon.gif"} alt={"doraemon"} width={192} height={192} priority={true}/>
         <h1 className="text-xl font-bold">Size Specific Image Generator</h1>
         <p className="lg:w-1/4 text-center mb-[50px] px-8">
