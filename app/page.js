@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -56,13 +57,14 @@ export default function Home() {
   }, [value]);
 
   return (
-      <div className="w-screen h-screen flex justify-center items-center flex-col gap-5">
+      <div className="w-screen h-screen flex justify-start items-center flex-col gap-5 mt-20">
+        <Image src={"/doraemon.gif"} alt={"doraemon"} width={192} height={192} priority={true}/>
         <h1 className="text-xl font-bold">Size Specific Image Generator</h1>
-        <p className="w-1/4 text-center mb-[50px]">
-          The Size Specific Image Generator is a tailored tool designed for testers in need of images with precise dimensions. It efficiently generates images that meet specific size requirements, ensuring accurate testing without the hassle of manual adjustments.
+        <p className="lg:w-1/4 text-center mb-[50px] px-8">
+          The Size Specific Image Generator is a tool designed for generates images that meet specific size requirements, ensuring accurate testing without the hassle of manual adjustments.
         </p>
-        <div className="w-1/4 flex flex-col gap-5">
-          <div className="flex items-center justify-between w-[100%]">
+        <div className="lg:w-1/4 flex flex-col gap-5">
+          <div className="flex items-center justify-between gap-5 w-[100%]">
             <input
                 className="border px-3 py-2 rounded-md w-[90%]"
                 type="number"
@@ -96,16 +98,16 @@ export default function Home() {
               </a>
           ) : null}
         </div>
-        <div className="absolute bottom-10">
+        <div className="absolute bottom-10 flex items-center justify-center gap-2">
           <h1 className="text-sm font-light">
             Made with ☕️ by{" "}
             <span
                 onClick={() => router.push("https://ajipurnomo.dev")}
-                className="cursor-pointer hover:text-sky-800 hover:font-bold hover:animate-ping transition-all"
+                className="cursor-pointer hover:text-sky-800 hover:font-bold transition-all"
             >
             Aji
           </span>
-          </h1>
+          </h1> | <h1 className="text-sm font-light">Thanks to chatGPT</h1>
         </div>
       </div>
   );
